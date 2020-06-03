@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.luck.demo.mapper.T_DZ_MXMapper">
+    <resultMap id="BaseResultMap" type="com.luck.demo.entity.T_DZ_MX">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <result column="ID" jdbcType="VARCHAR" property="id"/>
+        <result column="FW_ID" jdbcType="VARCHAR" property="fwId"/>
+        <result column="FW_NAME" jdbcType="VARCHAR" property="fwName"/>
+        <result column="DZRY_GH" jdbcType="VARCHAR" property="dzryGh"/>
+        <result column="DZRY_NAME" jdbcType="VARCHAR" property="dzryName"/>
+    </resultMap>
+    <select id="info" resultType="com.luck.demo.entity.T_DZ_MX">
+        select * from T_DZ_MX WHERE 1=1
+        <if test="fwName!=null and fwName!='' ">
+            <bind name="name" value="'%' + fwName +'%'"></bind>
+            and fw_name like #{name}
+        </if>
+    </select>
+</mapper>

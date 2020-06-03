@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.luck.demo.mapper.T_SYS_MENUMapper">
+    <resultMap id="BaseResultMap" type="com.luck.demo.entity.T_SYS_MENU">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="ID" jdbcType="VARCHAR" property="id"/>
+        <result column="NAME" jdbcType="VARCHAR" property="name"/>
+        <result column="URL" jdbcType="VARCHAR" property="url"/>
+        <result column="TYPE" jdbcType="DECIMAL" property="type"/>
+        <result column="PID" jdbcType="VARCHAR" property="pid"/>
+        <result column="SORT" jdbcType="DECIMAL" property="sort"/>
+        <result column="ICONCSS" jdbcType="VARCHAR" property="iconcss"/>
+        <result column="STATUS" jdbcType="DECIMAL" property="status"/>
+        <result column="LOADMODE" jdbcType="DECIMAL" property="loadmode"/>
+        <result column="VERSION" jdbcType="VARCHAR" property="version"/>
+        <result column="FLAG" jdbcType="VARCHAR" property="flag"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        ID, NAME, URL, TYPE, PID, SORT, ICONCSS, STATUS, LOADMODE, VERSION, FLAG
+    </sql>
+    <select id="getAllData" resultType="com.luck.demo.entity.ztree">
+        SELECT ID,PID,NAME FROM "T_SYS_MENU" where 1=1
+        <if test="id!=null">
+            and pid=#{id}
+        </if>
+    </select>
+    <select id="queryFjd" resultType="com.luck.demo.entity.T_SYS_MENU">
+        select id from "T_SYS_MENU" where pid is null
+    </select>
+</mapper>

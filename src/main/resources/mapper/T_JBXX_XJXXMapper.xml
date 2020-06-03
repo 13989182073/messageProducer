@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.luck.demo.mapper.T_JBXX_XJXXMapper">
+  <resultMap id="BaseResultMap" type="com.luck.demo.entity.T_JBXX_XJXX">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="XH" jdbcType="VARCHAR" property="xh" />
+    <result column="KSH" jdbcType="VARCHAR" property="ksh" />
+    <result column="KSLB" jdbcType="VARCHAR" property="kslb" />
+    <result column="XM" jdbcType="VARCHAR" property="xm" />
+    <result column="XB" jdbcType="VARCHAR" property="xb" />
+    <result column="CSRQ" jdbcType="VARCHAR" property="csrq" />
+    <result column="SFZH" jdbcType="VARCHAR" property="sfzh" />
+    <result column="MZ" jdbcType="VARCHAR" property="mz" />
+    <result column="JG" jdbcType="VARCHAR" property="jg" />
+    <result column="ZZMM" jdbcType="VARCHAR" property="zzmm" />
+    <result column="XYDM" jdbcType="VARCHAR" property="xydm" />
+    <result column="XYMC" jdbcType="VARCHAR" property="xymc" />
+    <result column="ZYDM" jdbcType="VARCHAR" property="zydm" />
+    <result column="ZYMC" jdbcType="VARCHAR" property="zymc" />
+    <result column="BJDM" jdbcType="VARCHAR" property="bjdm" />
+    <result column="BJMC" jdbcType="VARCHAR" property="bjmc" />
+    <result column="NJ" jdbcType="VARCHAR" property="nj" />
+    <result column="PYCC" jdbcType="VARCHAR" property="pycc" />
+    <result column="XXXS" jdbcType="VARCHAR" property="xxxs" />
+    <result column="XXNX" jdbcType="VARCHAR" property="xxnx" />
+    <result column="XZ" jdbcType="VARCHAR" property="xz" />
+    <result column="RXRQ" jdbcType="VARCHAR" property="rxrq" />
+    <result column="YJBYRQ" jdbcType="VARCHAR" property="yjbyrq" />
+    <result column="ZXZT" jdbcType="VARCHAR" property="zxzt" />
+    <result column="XJZT" jdbcType="VARCHAR" property="xjzt" />
+    <result column="STATUS" jdbcType="VARCHAR" property="status" />
+    <result column="IMAGEURL" jdbcType="VARCHAR" property="imageurl" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    XH, KSH, KSLB, XM, XB, CSRQ, SFZH, MZ, JG, ZZMM, XYDM, XYMC, ZYDM, ZYMC, BJDM, BJMC, 
+    NJ, PYCC, XXXS, XXNX, XZ, RXRQ, YJBYRQ, ZXZT, XJZT, STATUS, IMAGEURL
+  </sql>
+</mapper>
